@@ -25,14 +25,13 @@
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             grid-gap: 1em;
 
-            margin: 10vw 10vw;
-
+            margin-left: 10vw;
+            margin-right: 10vw;
         }
 
 
         .ret {
             padding: 1em;
-            border: 1px solid;
             border-radius: 1em;
         }
 
@@ -53,19 +52,16 @@
             justify-content: flex-end;
             align-items: center;
             z-index: 2;
-
             left: 0;
+            background-color: floralwhite;
         }
 
         button {
-
             font-family: 'Libre Franklin', sans-serif;
             font-size: 1.3rem;
             padding: 1rem;
-            border-radius: 30px;
+            background-color: floralwhite;
             border: none;
-
-
         }
 
         nav button {
@@ -76,18 +72,29 @@
 
 
         #splash {
-            /* Full height */
-            height: 100%;
-
-            /* Center and scale the image nicely */
+            background-image: url(billeder/Artboard%201.svg);
+            height: 100vw;
+            width: 100vh;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+
 
         }
 
         article {
             background-color: floralwhite;
+        }
+
+        h1 {
+
+            font-size: 4vw;
+            text-align: center;
+        }
+
+        footer {
+            margin-top: 20px;
+            margin-left: 20px;
         }
 
     </style>
@@ -98,8 +105,8 @@
 
 
 <header>
-    <img src="billeder/Artboard%201.svg" alt="babushkadukker" id="splash">
-    <h1 id="overskrift">Alle</h1>
+
+
     <nav>
         <button data-kategori="alle" class="valgt">Alle</button>
         <button data-kategori="forretter">Forretter</button>
@@ -109,9 +116,13 @@
         <button data-kategori="drikkevarer">Drikkevarer</button>
 
     </nav>
+
 </header>
+<img src="" alt="babushkadukker" id="splash">
 
 <body>
+
+    <h1 id="overskrift">Alle retter i denne kategori:</h1>
     <section id="liste"></section>
 
     <template>
@@ -123,7 +134,7 @@
         </article>
     </template>
 
-
+    <footer><b>Lavet af:</b> Mai Cecilie Højly Hansen <br><br> <b>Find os her:</b> Babushkagade 7, København K</footer>
     <script>
         const header = document.querySelector("header h1");
         const medieurl = "https://babushka-dd8a.restdb.io/media/";
@@ -192,6 +203,7 @@
         }
 
     </script>
+
 </body>
 
 </html>
