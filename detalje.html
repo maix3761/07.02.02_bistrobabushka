@@ -21,6 +21,14 @@
             margin: 5vw 5vw;
         }
 
+        button {
+            font-family: 'Libre Franklin', sans-serif;
+            font-size: 1.3rem;
+            padding: 5px;
+            background-color: floralwhite;
+            border: none;
+        }
+
     </style>
 </head>
 
@@ -56,6 +64,8 @@
             console.log("Retter", ret);
             visRet(ret);
         }
+
+
 
         function visRet() {
             document.querySelector(".navn").textContent = ret.navn;
